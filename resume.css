@@ -1,0 +1,38 @@
+        .main {
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+        }
+        .jad_png {
+            flex: 0 0 auto;
+        }
+        .jad_png.jpeg {
+            max-width: 300px;
+            height: auto;
+        }
+        .content {
+            flex: 0 0 auto;
+            font-family: Arial, sans-serif;
+            color: white
+        }
+        body {
+            background-color: rgb(8, 8, 8);
+        }
+        .main2 {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .skills {
+            display: flex;
+            align-items: flex;
+            gap: 20px;
+        }
+        .line1 {
+            border-left: 2px solid white;
+            height: 290px;
+            margin: 20px 30px;
+        }
+        .techstack {
+            flex: 1;
+        }
