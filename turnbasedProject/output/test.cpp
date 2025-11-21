@@ -89,7 +89,7 @@ void trainArc() {
         cout << "\nSelf Discovery Unlocked: " << nDiscovery << "/8" << endl;
         cout << "Skills Unlocked Status: ";
         for (int i = 0; i < 8; i++) {
-            cout << (skillsUnlocked[i] ? "✔" : "✖") << " ";
+            cout << (skillsUnlocked[i] ? "/" : "x") << " ";
         }
         cout << "\n=============================================================================================================\n\n";
     }
@@ -111,3 +111,4 @@ int main() {
 
     return 0;
 }
+
