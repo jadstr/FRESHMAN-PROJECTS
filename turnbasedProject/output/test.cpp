@@ -5,23 +5,21 @@
 
 using namespace std;
 
-// -------------------------
-// BASE STATS
-// -------------------------
-double stats[5] = {50, 10, 15, 15, 0}; // HP, ATK, END, EPool, EPRegen
+
+double stats[5] = {50, 10, 15, 15, 0}; 
 string statNames[5] = {"HP", "ATK", "END", "EP Pool", "EP Regen"};
 double statGrowth[5][2] = {
-    {21, 4},    // HP growth
-    {11, 2},    // ATK growth
-    {15, 3},    // END growth
-    {15, 3},    // EP Pool growth
-    {2.5, 0.5}  // EP Regen growth
+    {21, 4},    
+    {11, 2},    
+    {15, 3},    
+    {15, 3},    
+    {2.5, 0.5}  
 };
 
-// TRAIN COUNTERS
+
 int upgrades[5] = {1, 1, 1, 1, 1};
 
-// SELF-DISCOVERY SKILLS
+
 string selfDiscovery[8] = {
     "Gate of Opening (G1)", "Chain Handling", "Keigan Barrage", "First Lotus",
     "Gate of Mastery", "Gate of Healing (G2)", "Chain Barrage", "Reverse Lotus"
@@ -30,7 +28,6 @@ string selfDiscovery[8] = {
 bool skillsUnlocked[8] = {false, false, false, false, false, false, false, false};
 int nDiscovery = 0;
 
-// TRAINING FUNCTION
 void trainArc() {
     int leftTurns = 42;
 
@@ -50,12 +47,12 @@ void trainArc() {
         int choice;
         cin >> choice;
 
-        // Validate input
+    
         if (cin.fail()) {
-            cin.clear(); // Clear error state
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Remove invalid input
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
             cout << "Invalid input. Please enter a number between 1-6." << endl;
-            continue; // Ask again without consuming turn
+            continue; 
         }
 
         if (choice >= 1 && choice <= 5) {
@@ -66,16 +63,16 @@ void trainArc() {
         else if (choice == 6) {
             if (nDiscovery < 8) {
                 cout << "You unlocked: " << selfDiscovery[nDiscovery] << "!" << endl;
-                skillsUnlocked[nDiscovery] = true; // Mark skill as unlocked
+                skillsUnlocked[nDiscovery] = true; 
                 nDiscovery++;
             } else {
                 cout << "All self-discovery skills already unlocked!" << endl;
-                continue; // don't consume turn
+                continue; 
             }
         } 
         else {
             cout << "Invalid choice. Enter a number between 1-6." << endl;
-            continue; // don't consume turn
+            continue; 
         }
 
         leftTurns--;
