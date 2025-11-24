@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -45,6 +46,7 @@ string selfDiscovery[8] = {
 
 bool skillsUnlocked[8] = {false, false, false, false, false, false, false, false};
 int nDiscovery = 0;
+
 
 
 void trainArc() {
@@ -113,12 +115,29 @@ void trainArc() {
 }
 
 void bossFight(){
-    cout << "Boss Fight Initiated!" << endl;
-    // Boss fight logic would go here
-
+    for (int i = 42; i > 0; i--) {
+    cout<<"Remaining Turns: "<< i <<endl<<endl;
     
-
-
+    if 
+    
+    cout<<"========================================================="<<endl;
+    cout<<"        A  R  L  O  N  G     T  H  E       S  A  W       "<<endl;
+    cout<<"========================================================="<<endl;
+    cout<<"Boss HP: "<< <<", Boss Atk: "<< <<"Boss Endurance: "<< <<endl;
+    cout<<"========================================================="<<endl;
+    
+    cout<<endl;<<endl;
+    cout<<"========================================================="<<endl;
+    cout<<"Current HP: "<<statList[0].value<<", Base Atk: "<<statList[1].value<<endl;
+    cout<<"========================================================="<<endl;
+    cout<<"[1]. Basic Atk"<<endl;
+    cout<<"[2]. Skills "<<endl;
+    cout<<"[3]. Items "<<endl; 
+    cout<<
+        
+        
+    }
+    
 }
 
 
@@ -136,21 +155,6 @@ int main() {
         cout << (skillsUnlocked[i] ? "/" : "X") << " ";
     }
     cout << endl;
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
