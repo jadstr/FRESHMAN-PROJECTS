@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+  .container1 h1 {
+    text-align: right;
+    font-family: 'Montserrat', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #f1b900;
+    font-size: 80px;
+    display: inline-block;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    transition: color 180ms ease, transform 180ms ease, text-shadow 180ms ease;
+    cursor: default;
+    user-select: none;
+  }
+
+  .container2 h1 {
+    text-align: left;
+    font-family: 'Montserrat', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #f1b900;
+    font-size: 60px;
+    display: inline-block;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    transition: color 180ms ease, transform 180ms ease, text-shadow 180ms ease;
+    cursor: default;
+    user-select: none;
+  }
+
+  .container1 h1:hover {
+    transform: translateY(-3px);
+    color: #40eaf0;
+    text-shadow: 0 4px 12px rgba(26,115,232,0.08);
+  }
+
+  body {
+    padding-bottom: 80px;
+    background-color: #000;
+    color: #fff;
+  }
+
+  
+  .navbar .nav-link,
+  .navbar .navbar-brand {
+    color: #fff !important;
+  }
+
+  .container1 {
+    /* span most of the page but leave a comfortable gap from left/right edges */
+    width: calc(100% - 80px);
+    max-width: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-right: 3.5rem; /* gap between text and right edge / border */
+    padding-left: 1rem; /* ensure a gap from the left border */
+    border-right: none;
+  }
+
+  .container2 {
+    width: calc(100% - 80px);
+    max-width: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-right: 3.5rem; /* gap between text and right edge / border */
+    padding-left: 1rem; /* ensure a gap from the left border */
+    border-right: none;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  }
+
+
+  @media (max-width: 576px) {
+    .container1 {
+      padding-right: 1rem;
+      border-right: none;
+      max-width: 100%;
+    }
+  }
+
+ 
+  .hero-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* align items to the left inside the container */
+    gap: 2.5rem; /* larger gap between image and text */
+  }
+
+  .hero-right .hero-text {
+    flex: 1 1 auto;
+  }
+
+  .brain-right {
+    width: 500px;
+    height: auto;
+    margin-left: 0; /* remove negative offset so it respects container left gap */
+    border-radius: 12px;
+    transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+    cursor: pointer;
+    flex-shrink: 0;
+    animation: spin 6s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+
+  @media (max-width: 1200px) {
+    .brain-right { width: 260px; margin-left: 0; }
+  }
+
+  @media (max-width: 900px) {
+    .container1 { width: calc(100% - 40px); margin-left: 20px; margin-right: 20px; }
+    .hero-right { gap: 1.25rem; }
+    .brain-right { width: 200px; }
+  }
+
+  .brain-right:hover {
+    transform: translateY(-8px) scale(1.06);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.55);
+    filter: brightness(1.08) saturate(1.08);
+  }
+
+  @media (max-width: 768px) {
+    .brain-right { width: 160px; }
+    .hero-right { flex-direction: column; align-items: center; text-align: center; }
+    .container1 { padding-right: 1rem; border-right: none; }
+  }
+
+  .navbar.fixed-bottom, .navbar.bg-dark {
+    background-color: #0f0f0f !important;
+  }
+
+  /* Navbar button-like links with yellow hover accent */
+  .navbar .nav-link {
+    display: inline-block;
+    padding: .35rem .9rem;
+    margin: 0 .25rem;
+    border-radius: .5rem;
+    background: rgba(0, 132, 255, 0.15);
+    color: #fff !important;
+    border: 1px solid rgba(0, 140, 255, 0.4);
+    transition: background-color 180ms ease, color 180ms ease, transform 150ms ease, border-color 180ms ease;
+  }
+
+  .navbar .nav-link:hover {
+    background: #f1b900;
+    color: #000 !important;
+    border-color: #f1b900;
+    transform: translateY(-2px);
+  }
+
+  /* auto-hide/show navbar on scroll: translate off-screen when hidden */
+  .navbar.auto-hidden {
+    transform: translateY(100%);
+    transition: transform 260ms ease-in;
+  }
+
+  .navbar {
+    transition: transform 260ms ease-out, background-color 200ms ease;
+  }
+
+  /* FAQ/card styles: make accordion items look like cards and hoverable */
+  /* Example cards grid + styles */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .custom-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(100, 149, 237, 0.12); /* cornflower blue accent */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  }
+
+  .custom-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(233, 180, 6, 0.603);
+    border-color: rgba(255, 208, 0, 0.473);
+  }
+
+  .custom-card .card-img-top {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .custom-card .card-body { background: transparent; }
+
+  .custom-card .btn-primary {
+    background-color: #4f77ff; border-color: #4f77ff; color: #fff;
+  }
+
+  /* text colors for better contrast on dark background */
+  .custom-card .card-title {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .custom-card .card-text {
+    color: #cfe8ff;
+  }
+
+  .custom-card .btn-primary:hover {
+    background-color: #e2c209;
+    border-color: #ffdc18;
+    color: #fff;
+  }
+
+  .container2 h2 {
+    text-align: center;
+  }
+
+</style>
+
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<nav id="siteNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom auto-hidden">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQs</a></li>
+        <li class="nav-item"><a class="nav-link" href="ethicalUse.html">Ethical Use</a></li>
+        <li class="nav-item"><a class="nav-link" href="analogy.html">AI Analogy</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container1">
+    <br> <br> <br>
+  <div class="hero-right">
+    <img src="Pictures/brainLogo.jpg" alt="brainLogo" class="brain-right" loading="lazy">
+    <div class="hero-text">
+      <h1>Think better using Artificial Intelligence</h1>
+    </div>
+  </div>
+</div>
+<br> <br> <br> <br> <br> 
+<div class="container2">
+    <br> <br> <br> 
+    <h1> AI Definition </h1>
+    <h3> Artificial Intelligence (AI) refers to the development of computer systems capable of performing tasks that typically require human intelligence, such as reasoning, learning, decision-making, and perception. </h3>
+    <br> <br> <br> 
+    <h2> Popular AI Tools </h2>
+    <br>
+
+    <div class="cards-grid">
+      <div class="card custom-card">
+        <img src="Pictures/chatGPT.jpg" class="card-img-top" alt="chatGPT">
+        <div class="card-body">
+          <h5 class="card-title">ChatGPT</h5>
+          <p class="card-text">ChatGPT is a generative artificial intelligence chatbot developed by OpenAI. The "GPT" in its name stands for "Generative Pre-trained Transformer," which describes the underlying technology that processes and responds to prompts. </p>
+          <a href="https://chatgpt.com/" target="_blank" class="btn btn-primary">Use ChatGPT</a>
+        </div>
+      </div>
+
+      <div class="card custom-card">
+        <img src="Pictures/claude.png" class="card-img-top" alt="claude">
+        <div class="card-body">
+          <h5 class="card-title">Claude</h5>
+          <p class="card-text">Claude AI is a family of large language models (LLMs) and a chatbot developed by the company Anthropic. </p>
+          <a href="https://claude.ai/" target="_blank" class="btn btn-primary">Use Claude</a>
+        </div>
+      </div>
+
+      <div class="card custom-card">
+        <img src="Pictures/deepSeek.jpg" class="card-img-top" alt="deepseek">
+        <div class="card-body">
+          <h5 class="card-title">DeepSeek</h5>
+          <p class="card-text">DeepSeek is a Chinese AI company that develops and releases open-source large language models (LLMs).</p>
+          <a href="https://www.deepseek.com/en" target="_blank" class="btn btn-primary">Use Deepseek</a>
+        </div>
+      </div>
+      
+      <div class="card custom-card">
+        <img src="Pictures/gemini.webp" class="card-img-top" alt="gemini">
+        <div class="card-body">
+          <h5 class="card-title">Gemini</h5>
+          <p class="card-text">Gemini AI is a family of multimodal artificial intelligence models created by Google and developed by Google DeepMind that can understand and generate various types of data, including text, images, audio, and video. </p>
+          <a href="https://gemini.google.com/" target="_blank" class="btn btn-primary">Use Gemini</a>
+        </div>
+      </div>
+    </div>
+    
+
+
+  </div>
+
+  <!-- Navbar auto-hide / show on scroll -->
+  <script>
+    (function () {
+      const nav = document.getElementById('siteNavbar');
+      if (!nav) return;
+      let lastScroll = window.scrollY || document.documentElement.scrollTop;
+      // start visible briefly
+      nav.classList.remove('auto-hidden');
+      let isHidden = false;
+
+      window.addEventListener('scroll', () => {
+        const current = window.scrollY || document.documentElement.scrollTop;
+        if (current < lastScroll && current < 50) {
+          if (!isHidden) {
+            nav.classList.add('auto-hidden');
+            isHidden = true;
+          }
+        } else {
+          if (isHidden) {
+            nav.classList.remove('auto-hidden');
+            isHidden = false;
+          }
+        }
+        lastScroll = current <= 0 ? 0 : current;
+      }, { passive: true });
+    })();
+  </script>
+
+</body>
+</html>

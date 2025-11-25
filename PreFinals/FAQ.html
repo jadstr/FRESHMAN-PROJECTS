@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Generative AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body {
+    padding-bottom: 80px;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .navbar .nav-link,
+  .navbar .navbar-brand {
+    color: #fff !important;
+  }
+
+  .navbar.fixed-bottom, .navbar.bg-dark {
+    background-color: #0f0f0f !important;
+  }
+
+  /* Navbar button-like links with yellow hover accent */
+  .navbar .nav-link {
+    display: inline-block;
+    padding: .35rem .9rem;
+    margin: 0 .25rem;
+    border-radius: .5rem;
+    background: rgba(0, 132, 255, 0.15);
+    color: #fff !important;
+    border: 1px solid rgba(0, 140, 255, 0.4);
+    transition: background-color 180ms ease, color 180ms ease, transform 150ms ease, border-color 180ms ease;
+  }
+
+  .navbar .nav-link:hover {
+    background: #f1b900;
+    color: #000 !important;
+    border-color: #f1b900;
+    transform: translateY(-2px);
+  }
+
+  /* auto-hide/show navbar on scroll: translate off-screen when hidden */
+  .navbar.auto-hidden {
+    transform: translateY(100%);
+    transition: transform 260ms ease-in;
+  }
+
+  .navbar {
+    transition: transform 260ms ease-out, background-color 200ms ease;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #f1b900;
+    font-size: 48px;
+    margin-bottom: 2rem;
+  }
+
+  .accordion-item {
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .accordion-button {
+    background-color: transparent !important;
+    color: #fff !important;
+    padding: 1rem;
+    font-weight: 600;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(255,255,255,0.05) !important;
+    color: #ffd54f !important;
+  }
+
+  .accordion-body {
+    background-color: transparent;
+    color: #e0e0e0;
+    padding: 1rem;
+  }
+
+  .container {
+    max-width: 900px;
+    margin-top: 100px;
+  }
+
+  .references {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .references h3 {
+    color: #f1b900;
+    margin-bottom: 1rem;
+  }
+
+  .references ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .references li {
+    margin-bottom: 0.5rem;
+  }
+
+  .references a {
+    color: #64b5f6;
+    text-decoration: none;
+  }
+
+  .references a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<nav id="siteNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom auto-hidden">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="FAQ.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="ethicalUse.html">Ethical Use</a></li>
+        <li class="nav-item"><a class="nav-link" href="analogy.html">AI Analogy</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Frequently Asked Questions: </h2>
+  
+  <div class="accordion" id="genaiAccordion">
+
+    <div class="accordion-item">
+      <div class="accordion-header" id="headingWhat">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhat" aria-expanded="false" aria-controls="collapseWhat">
+          What is Generative AI?
+        </button>
+      </div>
+      <div id="collapseWhat" class="accordion-collapse collapse" aria-labelledby="headingWhat" data-bs-parent="#genaiAccordion">
+        <div class="accordion-body">
+          Generative AI (GenAI) refers to machine-learning models that can produce new content such as text, images, audio, code, video and much more. After learning patterns from large datasets. Examples include large language models (LLMs), image generators and music synthesis systems.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" id="headingHow">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHow" aria-expanded="false" aria-controls="collapseHow">
+          How does it work?
+        </button>
+      </div>
+      <div id="collapseHow" class="accordion-collapse collapse" aria-labelledby="headingHow" data-bs-parent="#genaiAccordion">
+        <div class="accordion-body">
+          Most GenAI models are trained on huge datasets using neural networks. During training they learn statistical relationships in data. At inference time they generate content by sampling from the learned distribution, guided by prompts or conditioning inputs.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" id="headingExamples">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExamples" aria-expanded="false" aria-controls="collapseExamples">
+          What are examples of GenAI tools?
+        </button>
+      </div>
+      <div id="collapseExamples" class="accordion-collapse collapse" aria-labelledby="headingExamples" data-bs-parent="#genaiAccordion">
+        <div class="accordion-body">
+          Text: ChatGPT, Claude, Bard. Images: DALL·E, Midjourney, Stable Diffusion. Code assistants: GitHub Copilot. Audio/video: MusicLM, Sora and research prototypes. Many tools combine multiple modalities.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" id="headingStrengths">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStrengths" aria-expanded="false" aria-controls="collapseStrengths">
+          What can GenAI do (strengths)?
+        </button>
+      </div>
+      <div id="collapseStrengths" class="accordion-collapse collapse" aria-labelledby="headingStrengths" data-bs-parent="#genaiAccordion">
+        <div class="accordion-body">
+          GenAI can accelerate creative tasks, draft and refine text, generate design ideas, synthesize images and audio, assist coding, summarize documents, and automate repetitive content workflows — often producing results faster than manual work.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" id="headingLimitations">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLimitations" aria-expanded="false" aria-controls="collapseLimitations">
+          What are its limitations or risks?
+        </button>
+      </div>
+      <div id="collapseLimitations" class="accordion-collapse collapse" aria-labelledby="headingLimitations" data-bs-parent="#genaiAccordion">
+        <div class="accordion-body">
+          Limitations include hallucinations (plausible-sounding but incorrect outputs), sensitivity to prompt wording, bias in training data, copyright and attribution concerns, privacy risks, and misuse (disinformation, deepfakes). Models also require substantial compute and careful evaluation.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" id="headingFAQ">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFAQ" aria-expanded="false" aria-controls="collapseFAQ">
+          How can Artificial Intelligence become dangerous?
+        </button>
+      </div>
+      <div id="collapseFAQ" class="accordion-collapse collapse" aria-labelledby="headingFAQ" data-bs-parent="#genaiAccordion">
+        <div class="accordion-body">
+          Artificial Intelligence can become dangerous in several ways. If AI systems are designed or used irresponsibly, they can lead to unintended consequences such as biased decision-making, privacy violations, and job displacement. Additionally, advanced AI systems could be exploited for malicious purposes, such as creating deepfakes or automating cyberattacks. There is also the risk of losing control over highly autonomous AI systems, which could act in ways that are misaligned with human values and interests. Ensuring robust safety measures, ethical guidelines, and regulatory oversight is crucial to mitigate these risks.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="references">
+    <h3>References</h3>
+    <ul>
+      <li><a href="https://openai.com/research" target="_blank">OpenAI Research</a></li>
+      <li><a href="https://deepmind.com/research" target="_blank">DeepMind Research</a></li>
+      <li><a href="https://ai.stanford.edu/" target="_blank">Stanford HAI</a></li>
+      <li><a href="https://arxiv.org/" target="_blank">arXiv (research papers)</a></li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
+  <!-- Navbar auto-hide / show on scroll -->
+  <script>
+    (function () {
+      const nav = document.getElementById('siteNavbar');
+      if (!nav) return;
+      let lastScroll = window.scrollY || document.documentElement.scrollTop;
+      nav.classList.remove('auto-hidden');
+      let isHidden = false;
+      window.addEventListener('scroll', () => {
+        const current = window.scrollY || document.documentElement.scrollTop;
+        if (current < lastScroll && current < 50) {
+          if (!isHidden) { nav.classList.add('auto-hidden'); isHidden = true; }
+        } else {
+          if (isHidden) { nav.classList.remove('auto-hidden'); isHidden = false; }
+        }
+        lastScroll = current <= 0 ? 0 : current;
+      }, { passive: true });
+    })();
+  </script>

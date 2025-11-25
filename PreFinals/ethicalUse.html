@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Generative AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body {
+    padding-bottom: 80px;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .navbar .nav-link,
+  .navbar .navbar-brand {
+    color: #fff !important;
+  }
+
+  .navbar.fixed-bottom, .navbar.bg-dark {
+    background-color: #0f0f0f !important;
+  }
+
+  /* Navbar button-like links with yellow hover accent */
+  .navbar .nav-link {
+    display: inline-block;
+    padding: .35rem .9rem;
+    margin: 0 .25rem;
+    border-radius: .5rem;
+    background: rgba(0, 132, 255, 0.15);
+    color: #fff !important;
+    border: 1px solid rgba(0, 140, 255, 0.4);
+    transition: background-color 180ms ease, color 180ms ease, transform 150ms ease, border-color 180ms ease;
+  }
+  .navbar .nav-link:hover {
+    background: #f1b900;
+    color: #000 !important;
+    border-color: #f1b900;
+    transform: translateY(-2px);
+  }
+
+  /* auto-hide/show navbar on scroll: translate off-screen when hidden */
+  .navbar.auto-hidden {
+    transform: translateY(100%);
+    transition: transform 260ms ease-in;
+  }
+
+  .navbar {
+    transition: transform 260ms ease-out, background-color 200ms ease;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #f1b900;
+    font-size: 48px;
+    margin-bottom: 2rem;
+  }
+.container1 {
+    width: calc(100% - 80px);
+    max-width: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-right: 3.5rem; /* gap between text and right edge / border */
+    padding-left: 1rem; /* ensure a gap from the left border */
+    border-right: none;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  }
+
+
+</style>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<nav id="siteNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom auto-hidden">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="FAQ.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="ethicalUse.html">Ethical Use</a></li>
+        <li class="nav-item"><a class="nav-link" href="analogy.html">AI Analogy</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+</body>
+</html>
+
+  <script>
+    (function () {
+      const nav = document.getElementById('siteNavbar');
+      if (!nav) return;
+      let lastScroll = window.scrollY || document.documentElement.scrollTop;
+      nav.classList.remove('auto-hidden');
+      let isHidden = false;
+      window.addEventListener('scroll', () => {
+        const current = window.scrollY || document.documentElement.scrollTop;
+        if (current < lastScroll && current < 50) {
+          if (!isHidden) { nav.classList.add('auto-hidden'); isHidden = true; }
+        } else {
+          if (isHidden) { nav.classList.remove('auto-hidden'); isHidden = false; }
+        }
+        lastScroll = current <= 0 ? 0 : current;
+      }, { passive: true });
+    })();
+  </script>

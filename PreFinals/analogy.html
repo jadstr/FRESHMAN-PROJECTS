@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Generative AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body {
+    padding-bottom: 80px;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .navbar .nav-link,
+  .navbar .navbar-brand {
+    color: #fff !important;
+  }
+
+  .navbar.fixed-bottom, .navbar.bg-dark {
+    background-color: #0f0f0f !important;
+  }
+
+  /* Navbar button-like links with yellow hover accent */
+  .navbar .nav-link {
+    display: inline-block;
+    padding: .35rem .9rem;
+    margin: 0 .25rem;
+    border-radius: .5rem;
+    background: rgba(0, 132, 255, 0.15);
+    color: #fff !important;
+    border: 1px solid rgba(0, 140, 255, 0.4);
+    transition: background-color 180ms ease, color 180ms ease, transform 150ms ease, border-color 180ms ease;
+  }
+
+  .navbar .nav-link:hover {
+    background: #f1b900;
+    color: #000 !important;
+    border-color: #f1b900;
+    transform: translateY(-2px);
+  }
+
+  /* auto-hide/show navbar on scroll: translate off-screen when hidden */
+  .navbar.auto-hidden {
+    transform: translateY(100%);
+    transition: transform 260ms ease-in;
+  }
+
+  .navbar {
+    transition: transform 260ms ease-out, background-color 200ms ease;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #f1b900;
+    font-size: 48px;
+    margin-bottom: 2rem;
+  }
+.container1 {
+    width: calc(100% - 80px);
+    max-width: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-right: 3.5rem; /* gap between text and right edge / border */
+    padding-left: 1rem; /* ensure a gap from the left border */
+    border-right: none;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  }
+  .container2 {
+    width: calc(100% - 80px);
+    max-width: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-right: 3.5rem; /* gap between text and right edge / border */
+    padding-left: 1rem; /* ensure a gap from the left border */
+    border-right: none;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  }
+  .container2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .container2 .text-section {
+    flex: 1;
+  }
+
+  .container2 img {
+    flex-shrink: 0;
+    width: 55%;
+    height: auto;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .accordion-item {
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .accordion-button {
+    background-color: transparent !important;
+    color: #fff !important;
+    padding: 1rem;
+    font-weight: 600;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(255,255,255,0.05) !important;
+    color: #ffd54f !important;
+  }
+
+  .accordion-body {
+    background-color: transparent;
+    color: #e0e0e0;
+    padding: 1rem;
+  }
+
+
+</style>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<nav id="siteNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom auto-hidden">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="FAQ.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="ethicalUse.html">Ethical Use</a></li>
+        <li class="nav-item"><a class="nav-link" href="analogy.html">AI Analogy</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br> <br> 
+
+<div class="container1">
+    <p><h2>AI Analogy</h2></p>
+    
+    <p>You are organizing your wedding, the documentation team is asking 40k for the wedding package. They will use an Iphone 16 pro max to cover the event and CapCut for the same day edit video. The documentation team has 2 years of experience and has an above average portfolio. Would you agree to that deal? Explain your answer and justify the integrity of their work. Reflect on the integrity, creativity, skill level of the “vibe” coders.</p> 
+    <br> <br>
+    <div class="accordion" id="genaiAccordion">
+    <p><h3>Let's breakdown the Analogy</h3> <br> </p>
+
+      <div class="accordion-item">
+      <h2 class="accordion-header" id="headingWhat">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhat" aria-expanded="false" aria-controls="collapseWhat">
+          What is a vibe coder?
+        </button>
+      </h2>
+      <div id="collapseWhat" class="accordion-collapse collapse" aria-labelledby="headingWhat" data-bs-parent="#genaiAccordion">
+        <div class="accordion-body">
+        It is a term used to describe a person who creates certain things often related to software. They often rely on their creativity, style and knowledge rather than following a proper or a complicated procedure. They are often viewed as resourceful and cost-efficient workers.   
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="accordion" id="genaiAccordion2">
+      <div class="accordion-item">
+      <h2 class="accordion-header" id="headingIntegrity">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntegrity" aria-expanded="false" aria-controls="collapseIntegrity">
+          Integrity of their work
+        </button>
+      </h2>
+      <div id="collapseIntegrity" class="accordion-collapse collapse" aria-labelledby="headingIntegrity" data-bs-parent="#genaiAccordion2">
+        <div class="accordion-body">
+        The integrity of their work is proven by the output they provide. Although they are only using mid-range equipment, the quality of their output is still above average. This shows that the tools they use do not define the quality of their work but rather the skill and creativity they possess. 
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingCreativity">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCreativity" aria-expanded="false" aria-controls="collapseCreativity">
+          Advantages of "Vibe Coding"
+        </button>
+      </h2>
+      <div id="collapseCreativity" class="accordion-collapse collapse" aria-labelledby="headingCreativity" data-bs-parent="#genaiAccordion2">
+        <div class="accordion-body">
+        Vibe coding's advantages include dramatically increased speed and productivity, lower development barriers for a wider range of team members, and a boost to creativity by automating repetitive tasks. It allows developers to focus on higher-level design and problem-solving rather than getting bogged down in boilerplate code. This can lead to more innovative solutions and a more enjoyable development experience.
+        </div>
+      </div>
+</div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSkill">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkill" aria-expanded="false" aria-controls="collapseSkill">
+          Disadvantages of "Vibe Coding"
+        </button>
+      </h2>
+      <div id="collapseSkill" class="accordion-collapse collapse" aria-labelledby="headingSkill" data-bs-parent="#genaiAccordion2">
+        <div class="accordion-body">
+        Vibe coding's disadvantages include potential quality issues if the generated code is not properly reviewed, a learning curve to effectively use the tools, and possible over-reliance on automation that could lead to skill degradation. There may also be limitations in customization and flexibility compared to hand-coding everything from scratch. Additionally, vibe coding tools may not always produce optimal or efficient code, requiring developers to have a good understanding of coding principles to identify and fix any issues.
+        </div>
+      </div>
+    </div>
+  </div> <br> <br>
+
+  <h2>What matters the most in the era of "AI"?</h2>
+  <h4>In the era of AI, what matters most is the creativity, skill, and integrity of the professionals using these tools. </h4>
+  </div>
+
+
+
+<br> <br> <br> <br> <br> <br>
+<div class="container2">
+  <div class="text-section">
+    <p><h2>My personal take..</h2></p>
+    <p>Let's assume that the level of the documentation professionals are beyond average and their outputs are proven to be on top tier quality. I would pretty much agree on the deal since what matters in the aspect of the field is the creativity and what the best value they could possibly offer. Although the documentation team is only limited to "mid-range equipment" compared to actual videographers who uses fancy cameras, I truly believe that it doesn't measure the level of skill and output they can achieve. I always believe that the value they bring isn't measured by the tools they use but the creativity and knowledge they possess. The integrity they show in their work is not proven by the tools they use but the evidence of skill and how much work are they willing to put in just to prove their value. 
+    </p>
+  </div>
+  <img src="Pictures/blackdudthinking.png" alt="thinking">
+</div>
+</body>
+</html>
+
+  <script>
+    (function () {
+      const nav = document.getElementById('siteNavbar');
+      if (!nav) return;
+      let lastScroll = window.scrollY || document.documentElement.scrollTop;
+      nav.classList.remove('auto-hidden');
+      let isHidden = false;
+      window.addEventListener('scroll', () => {
+        const current = window.scrollY || document.documentElement.scrollTop;
+        if (current < lastScroll && current < 50) {
+          if (!isHidden) { nav.classList.add('auto-hidden'); isHidden = true; }
+        } else {
+          if (isHidden) { nav.classList.remove('auto-hidden'); isHidden = false; }
+        }
+        lastScroll = current <= 0 ? 0 : current;
+      }, { passive: true });
+    })();
+  </script>
