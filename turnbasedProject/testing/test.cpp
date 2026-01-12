@@ -1,0 +1,161 @@
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <limits>
+
+using namespace std;
+
+
+struct Stat {
+    string name;
+    double value;
+    int upgrades;
+    double baseGrowth;
+    double perUpgradeGrowth;
+};
+
+struct boss {
+    string name;
+    int hp;
+    int atk;
+    int end;
+};
+
+boss statBoss[3] = {
+    {"Base", 2500, 520, 600},
+    {"Kiribachi", 1600, 550, 600},
+    {"Enraged", 900, 600, 660}
+};
+
+Stat statList[5] = {
+    {"HP", 50.0, 1, 21.0, 4.0},
+    {"ATK", 10.0, 1, 11.0, 2.0},
+    {"END", 15.0, 1, 15.0, 3.0},
+    {"EP Pool", 15.0, 1, 15.0, 3.0},
+    {"EP Regen", 0.0, 1, 2.5, 0.5}
+};
+
+
+int months = 0;
+
+string selfDiscovery[8] = {
+    "Gate of Opening (G1)", "Chain Handling", "Keigan Barrage", "First Lotus",
+    "Gate of Mastery", "Gate of Healing (G2)", "Chain Barrage", "Reverse Lotus"
+};
+
+bool skillsUnlocked[8] = {false, false, false, false, false, false, false, false};
+int nDiscovery = 0;
+
+
+
+void trainArc() {
+    int leftTurns = 48;
+
+    while (leftTurns > 0) {
+        cout << "=============================================================================================================\n";
+        cout << "You have " << leftTurns << " training turns left." << endl;
+        cout << "Choose a stat to train:" << endl;
+
+        for (int i = 0; i < 5; i++) {
+              cout << "[" << (i + 1) << "] " << statList[i].name 
+                  << " (Current: " << fixed << setprecision(1) << statList[i].value 
+                  << ", Upgrades: " << statList[i].upgrades << ")" << endl;
+        }
+        cout << "[6] Self Discovery (Unlocked: " << nDiscovery << ")" << endl;
+        cout << "Enter your choice: ";
+
+        int choice;
+        cin >> choice;
+
+        if (cin.fail()) {
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+            cout << "Invalid input. Please enter a number between 1-6." << endl;
+            continue; 
+        }
+
+        if (choice >= 1 && choice <= 5) {
+            int idx = choice - 1;
+            statList[idx].value += statList[idx].baseGrowth + statList[idx].perUpgradeGrowth * (statList[idx].upgrades - 1);
+            statList[idx].upgrades++;
+        } 
+        else if (choice == 6) {
+            if (nDiscovery < 8) {
+                cout << "You unlocked: " << selfDiscovery[nDiscovery] << "!" << endl;
+                skillsUnlocked[nDiscovery] = true; // Mark skill as unlocked
+                nDiscovery++;
+            } else {
+                cout << "All self-discovery skills already unlocked!" << endl;
+                continue; // don't consume turn
+            }
+        } 
+        else {
+            cout << "Invalid choice. Enter a number between 1-6." << endl;
+            continue; 
+        }
+
+        leftTurns--;
+        months += 2; 
+
+        cout << "=============================================================================================================\n";
+        cout << "Updated stats:" << endl;
+        for (int i = 0; i < 5; i++) {
+            cout << statList[i].name << ": " << fixed << setprecision(1) << statList[i].value << " | ";
+        }
+
+        cout << "\nSelf Discovery Unlocked: " << nDiscovery << "/8" << endl;
+        cout << months << " months has passed."<< "\n";
+        cout << "Skills Unlocked Status: ";
+        for (int i = 0; i < 8; i++) {
+            cout << (skillsUnlocked[i] ? "/" : "X") << " ";
+        }
+        cout << "\n=============================================================================================================\n\n";
+    }
+}
+
+void bossFight(){
+    for (int i = 42; i > 0; i--) {
+    cout<<"Remaining Turns: "<< i <<endl<<endl;
+    
+    if 
+    
+    cout<<"========================================================="<<endl;
+    cout<<"        A  R  L  O  N  G     T  H  E       S  A  W       "<<endl;
+    cout<<"========================================================="<<endl;
+    cout<<"Boss HP: "<< <<", Boss Atk: "<< <<"Boss Endurance: "<< <<endl;
+    cout<<"========================================================="<<endl;
+    
+    cout<<endl;<<endl;
+    cout<<"========================================================="<<endl;
+    cout<<"Current HP: "<<statList[0].value<<", Base Atk: "<<statList[1].value<<endl;
+    cout<<"========================================================="<<endl;
+    cout<<"[1]. Basic Atk"<<endl;
+    cout<<"[2]. Skills "<<endl;
+    cout<<"[3]. Items "<<endl; 
+    cout<<
+        
+        
+    }
+    
+}
+
+
+int main() {
+    trainArc();
+
+    cout << "Training complete! Final stats:" << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << statList[i].name << ": " << fixed << setprecision(1) << statList[i].value << " | ";
+    }
+    cout << "\nSelf Discovery unlocked: " << nDiscovery << "/8" << endl;
+    cout << months << " Months passed." << endl;
+    cout << "Skills Unlocked Status: ";
+    for (int i = 0; i < 8; i++) {
+        cout << (skillsUnlocked[i] ? "/" : "X") << " ";
+    }
+    cout << endl;
+}
+
+
+
